@@ -167,7 +167,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("1.png") no-repeat center;
+    background: url("images/1.png") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -459,7 +459,7 @@ section .title::after{
 /* Social Media section styling */
 
 .socialmedia .title::after{
-    content: "what i know";
+    content: "where i am ";
 }
 .socialmedia .socialmedia-content .column{
     width: calc(50% - 30socialmedia)}
@@ -645,6 +645,7 @@ section .title::after{
 .contact .contact-content .row .info{
     margin-left: 30px;
 }
+
 .contact .contact-content .row i{
     font-size: 25px;
     color: crimson;
@@ -716,9 +717,9 @@ section .title::after{
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: #fff;
     padding: 15px 23px;
-    color: #fff;
+    color: #333;
     text-align: center;
 }
 footer span a{
