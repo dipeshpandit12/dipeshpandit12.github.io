@@ -35,12 +35,14 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services,.courses, .skills,.socialmedia .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
+.courses .cour-content,
 .skills .skills-content,
+.socialmedia  .socialmedia-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +167,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("banner.jpg") no-repeat center;
+    background: url("images/1.png") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -257,47 +259,51 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+
+/* courses section styling */
+.courses, .teams{
     color:#fff;
     background: #111;
 }
-.services .title::before,
+.courses .title::before,
 .teams .title::before{
     background: #fff;
 }
-.services .title::after,
+.courses .title::after,
 .teams .title::after{
     background: #111;
-    content: "what i provide";
+    content: "Free";
 }
-.services .serv-content .card{
+.courses .cour-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;          
+                 
+    
 }
-.services .serv-content .card:hover{
+.courses .cour-content .card:hover{
     background: crimson;
 }
-.services .serv-content .card .box{
+.courses .cour-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.courses .cour-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .serv-content .card i{
+.courses .cour-content .card i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+
+.courses .cour-content .card:hover i{
     color: #fff;
 }
-.services .serv-content .card .text{
+.courses .cour-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -365,18 +371,190 @@ section .title::after{
 .skills-content .right .html::before{
     width: 90%;
 }
-.skills-content .right .css::before{
-    width: 60%;
+.skills-content .right .c::before{
+    width: 85%;
 }
-.skills-content .right .js::before{
+.skills-content .right .python::before{
     width: 80%;
 }
-.skills-content .right .php::before{
-    width: 50%;
+
+.skills-content .right .js::before{
+    width: 60%;
+}
+.skills-content .right .css::before{
+    width: 30%;
 }
 .skills-content .right .mysql::before{
-    width: 70%;
+    width: 10%;
 }
+.skills-content .right .php::before{
+    width: 5%;
+}
+
+/* Video Graphy */
+.skills-content .right .lightroom::before{
+    width: 90%;
+}
+.skills-content .right .wordpress::before{
+    width: 65%;
+}
+.skills-content .right .filmora::before{
+    width: 55%;
+}
+.skills-content .right .premierepro::before{
+    width: 45%;
+}
+.skills-content .right .photoshop::before{
+    width: 40%;
+}
+
+
+
+/* services //projects section styling */
+.services, .teams{
+    color:#fff;
+    background: #111;
+}
+.services .title::before,
+.teams .title::before{
+    background: #fff;
+}
+.services .title::after,
+.teams .title::after{
+    background: #111;
+    content: "i made engaged";
+}
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover{
+    background: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i{
+    color: #fff;
+}
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* Social Media section styling */
+
+.socialmedia .title::after{
+    content: "what i know";
+}
+.socialmedia .socialmedia-content .column{
+    width: calc(50% - 30socialmedia)}
+.socialmedia .socialmedia-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.socialmedia .socialmedia-content .left p{
+    text-align: justify;
+}
+.socialmedia .socialmedia-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.socialmedia .socialmedia-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+.socialmedia .socialmedia-content .right .bars{
+    margin-bottom: 15px;
+}
+.socialmedia .socialmedia-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .socialmedia .socialmedia-content .right span{
+    font-weight:ocialmedia
+    font-size: 18px;
+} */
+.socialmedia .socialmedia-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.socialmedia .socialmedia-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.socialmedia-content .right .html::before{
+    width: 90%;
+}
+.socialmedia-content .right .c::before{
+    width: 85%;
+}
+.socialmedia-content .right .python::before{
+    width: 80%;
+}
+
+.socialmedia-content .right .js::before{
+    width: 60%;
+}
+.socialmedia-content .right .css::before{
+    width: 30%;
+}
+.socialmedia-content .right .mysql::before{
+    width: 10%;
+}
+.socialmedia-content .right .php::before{
+    width: 5%;
+}
+
+/* Video Graphy */
+.socialmedia-content .right .lightroom::before{
+    width: 90%;
+}
+.socialmedia-content .right .wordpress::before{
+    width: 65%;
+}
+.socialmedia-content .right .filmora::before{
+    width: 55%;
+}
+.socialmedia-content .right .premierepro::before{
+    width: 45%;
+}
+.socialmedia-content .right .photoshop::before{
+    width: 40%;
+}
+
+
 
 /* teams section styling */
 .teams .title::after{
@@ -623,7 +801,17 @@ footer span a:hover{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
+    .courses .cour-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .socialmedia .socialmedia-content .column,
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
@@ -646,7 +834,11 @@ footer span a:hover{
     .services .serv-content .card{
         width: 100%;
     }
+    .courses .cour-content .card{
+        width: 100%;
+    }
 }
+
 
 @media (max-width: 500px) {
     .home .home-content .text-2{
@@ -658,6 +850,9 @@ footer span a:hover{
     .about .about-content .right .text,
     .skills .skills-content .left .text{
         font-size: 19px;
+    }
+        .socialmedia .socialmedia-content .left .text{
+            font-size: 19px;
     }
     .contact .right form .fields{
         flex-direction: column;
