@@ -16,7 +16,7 @@ export default function Rootlayout({children}){
                 <Navbar/>
             </GridItem>
 
-            <GridItem  rowSpan={9}  colSpan={6} >
+            <GridItem  rowSpan={9}  colSpan={6} bg='lightblue'>
             {children}
             </GridItem>
 
