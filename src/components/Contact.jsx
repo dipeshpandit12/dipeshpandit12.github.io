@@ -1,6 +1,6 @@
 import { useRef,useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { FormLabel,Box,Input,FormControl,Textarea, Button,useToast,VStack } from '@chakra-ui/react';
+import { FormLabel,Box,Input,Center,Heading,FormControl,Textarea, Button,useToast,VStack } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
 
 export default function Contact (){
@@ -59,56 +59,71 @@ export default function Contact (){
 
 
   return (
-<Box pt="5rem" bg="lightblue" height="100%">
-    <VStack  justifyContent="center">
-      <form ref={form} onSubmit={sendEmail}>
-        <FormControl isRequired>
-          <FormLabel>Full Name</FormLabel>
-            <Input
-              as={Input}
-              placeholder='Full Name'
-              type='text'
-              name='user_name'
-              value={user_name}
-              onChange={(e) => setUserName(e.target.value)}
-              bg="white"
-            />
-        </FormControl>
+<Box mx={{ base: "2rem", md: "1rem", lg: "2rem" }}
+      pt="3rem"
+      width="100wh"
+      height="100%"
+      px={{md:"3rem",lg:"5rem"}}
+      pb="4rem"
+>
+    <Center>
 
-        <FormControl isRequired>
-          <FormLabel>Email</FormLabel>
-            <Input
-              as={Input}
-              placeholder='Email'
-              type='email'
-              name="user_email"
-              value={user_email}
-              onChange={(e) => setUserEmail(e.target.value)}
-              bg="white"
-            />
-        </FormControl>
+        <Box maxW="35rem" minW="20rem">
+          <VStack pb="2rem">
+            <Heading fontSize="2rem">Let's Talk </Heading>
+            <Heading fontSize="1rem" fontWeight="100">I will be Happy to hear from you 😊</Heading>
+          </VStack>
 
-        <FormControl isRequired>
-          <FormLabel>Message</FormLabel>
-            <Input
-              as={Textarea}
-              placeholder='message'
-              name='message'
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              bg="white"
-            />
-        </FormControl>
+          <form ref={form} onSubmit={sendEmail}>
+            <FormControl isRequired>
+              <FormLabel>Full Name</FormLabel>
+                <Input
+                  as={Input}
+                  placeholder='Full Name'
+                  type='text'
+                  name='user_name'
+                  value={user_name}
+                  onChange={(e) => setUserName(e.target.value)}
+                  bg="white"
+                />
+            </FormControl>
 
-        <Button
-        my="1rem"
-          type='submit'
-        >
-          {submit}
-        </Button>
+            <FormControl isRequired>
+              <FormLabel>Email</FormLabel>
+                <Input
+                  as={Input}
+                  placeholder='Email'
+                  type='email'
+                  name="user_email"
+                  value={user_email}
+                  onChange={(e) => setUserEmail(e.target.value)}
+                  bg="white"
+                />
+            </FormControl>
 
-        </form>
-    </VStack>
+            <FormControl isRequired>
+              <FormLabel>Message</FormLabel>
+                <Input
+                  as={Textarea}
+                  placeholder='message'
+                  name='message'
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  bg="white"
+                />
+            </FormControl>
+
+            <Button
+              my="1rem"
+              type='submit'
+              colorScheme='purple'
+              width="100%"
+            >
+              {submit}
+            </Button>
+            </form>
+        </Box>
+    </Center>
     </Box>
   );
 }
