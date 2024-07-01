@@ -124,11 +124,10 @@ import Experience from "./Experience";
 
     return (
       <Box
-      mx={{ base: "2rem", md: "1rem", lg: "2rem" }}
+      px={{ base: "1rem", md: "3rem", lg: "7rem" }}
       pt="3rem"
       width="100wh"
       height="100%"
-      px={{md:"3rem",lg:"5rem"}}
       pb="4rem"
       >
         <VStack >
