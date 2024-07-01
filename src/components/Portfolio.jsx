@@ -17,10 +17,9 @@ import {
   CardBody,
   CardFooter,
   Divider,
-  HStack,
+  Flex,
   Button,
   Center,
-  Spacer,
   Image,
   VStack,
 } from "@chakra-ui/react";
@@ -305,62 +304,64 @@ export default function Portfolio() {
         <TabPanels>
           {tabs_panel_list.map((tab_panel, index) => (
             <TabPanel key={index}>
-              <SimpleGrid  columns={{base:1,md:2,lg:3}} minChildWidth="16rem" spacing={2} mt="2rem" ml="2rem">
+              <SimpleGrid  columns={{base:1,md:2,lg:3}} minChildWidth="16rem" spacing={6} mt="2rem" align="center">
+              
                 {Object.keys(tab_panel).map((category) => {
                   const items = tab_panel[category];
                   // Check if the category is an array (like "Web Projects"), otherwise wrap it in an array
                   const itemsArray = Array.isArray(items) ? items : [items];
                   return itemsArray.map((item, itemIndex) => (
-                    <Card
-                    width="16rem"
-                    bg="white"
-                    borderBottom="4px"
-                    borderColor="purple.400"
-                    key={itemIndex}
-                    my="1rem"
-                    borderRadius={10}
-                    overflow="hidden"
-                >
-                  <CardBody p="0"  overflow="hidden">
-                    <Center>
-                      <Image
-                        src={item.image_url}
-                        width="15rem"
-                        height="8rem"
-                        transform='scale(1.15)'
-                        transition="all .45s ease-in-out"
-                        _hover={{transform:'scale(1.3)'}}
-                      />
-                    </Center>
-                  </CardBody>
-                  <CardFooter py="1rem">
-                    <VStack align="left">
-                      <Heading fontSize="0.9rem" >{item.name}</Heading>
-                      <Divider borderColor="gray.300"/>
-                        <HStack spacing={4}>
-                                <Button
-                                  variant="ghost"
-                                  leftIcon={item.first_icon}
-                                  onClick={() => window.open(item.first_icon_url)}
-                                  colorScheme="purple"
-                                >
-                                  { item.first_icon_name}
-                                </Button>
-                                <Spacer/>
-                                <Button
-                                  variant="ghost"
-                                  leftIcon={item.second_icon}
-                                  onClick={() => window.open(item.second_icon_url)}
-                                  colorScheme="purple"
-                                >
-                                  { item.second_icon_name}
-                                </Button>
-                          </HStack>
-                    </VStack>
-                  </CardFooter>
-                </Card>
+                      <Card
+                        maxwidth="17rem"
+                        bg="white"
+                        borderBottom="4px"
+                        borderColor="purple.400"
+                        key={itemIndex}
+                        my="1rem"
+                        borderRadius={10}
+                        overflow="hidden"
+                  >
+                    <CardBody p="0"  overflow="hidden">
+                      <Center>
+                        <Image
+                          src={item.image_url}
+                          maxwidth="17rem"
+                          height="10rem"
+                          transform='scale(1.1)'
+                          transition="all .45s ease-in-out"
+                          _hover={{transform:'scale(1.3)'}}
+                        />
+                      </Center>
+                    </CardBody>
+                    <CardFooter py="1rem" maxwidth="17rem">
+                      <VStack width="100%">
+                        <Heading fontSize="0.9rem" alignSelf="start" >{item.name}</Heading>
+                        <Divider borderColor="gray.300"/>
+                          <Flex flexDirection="row" justifyContent="space-evenly" width="100%" >
+                                  <Button
+                                    variant="ghost"
+                                    leftIcon={item.first_icon}
+                                    onClick={() => window.open(item.first_icon_url)}
+                                    colorScheme="purple"
+                                  >
+                                    { item.first_icon_name}
+                                  </Button>
+                                  <Button
+                                    variant="ghost"
+                                    leftIcon={item.second_icon}
+                                    onClick={() => window.open(item.second_icon_url)}
+                                    colorScheme="purple"
+                                  >
+                                    { item.second_icon_name}
+                                  </Button>
+                            </Flex>
+                      </VStack>
+                    </CardFooter>
+                  </Card>
                   ));
+
                 })}
+                
               </SimpleGrid>
             </TabPanel>
           ))}

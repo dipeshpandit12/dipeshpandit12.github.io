@@ -5,7 +5,7 @@ export default function Footer(){
 
     return(
 
-            <Box px="3rem" my="1rem" width="100%">
+            <Box px="3rem" my="1rem" maxwidth="100wd">
                 <Center>
                     <HStack>
                       <Icon boxSize="1.5rem" as={FaLinkedin} onClick={() => window.open("https://www.linkedin.com/in/dipeshpandit12/")} cursor={"pointer"} _hover={{color:"#0077B5"}}>LInkedin</Icon>

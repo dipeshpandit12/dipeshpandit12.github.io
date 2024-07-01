@@ -8,7 +8,6 @@ import {
     CardFooter,
     HStack,
     Button,
-    Spacer,
     VStack,
     SimpleGrid,
     Divider,
@@ -184,10 +183,10 @@ import Experience from "./Experience";
             <Heading fontSize="1.3rem" color="purple.600" fontWeight={700}>Projects</Heading>
           </HStack>
             <Box px="1rem" py="2rem" >
-              <SimpleGrid  columns={{base:1,md:2,lg:3}} minChildWidth="16rem" spacing={2}>
+              <SimpleGrid  columns={{base:1,md:2,lg:3}} minChildWidth="16rem" spacing={6}  align="center">
                 {projects_list.map((project,index)=>(
                   <Card
-                    width="16rem"
+                    maxwidth="17rem"
                     bg="white"
                     borderBottom="4px"
                     borderColor="purple.400"
@@ -200,19 +199,19 @@ import Experience from "./Experience";
                     <Center>
                       <Image
                         src={project.image_url}
-                        width="15rem"
-                        height="8rem"
+                        maxwidth="17rem"
+                        height="10rem"
                         transform='scale(1.1)'
                         transition="all .45s ease-in-out"
                         _hover={{transform:'scale(1.3)'}}
                       />
                     </Center>
                   </CardBody>
-                  <CardFooter py="1rem">
-                    <VStack align="left">
-                      <Heading fontSize="0.9rem" >{project.name}</Heading>
+                  <CardFooter py="1rem" maxwidth="17rem">
+                    <VStack width="100%">
+                      <Heading fontSize="0.9rem"  alignSelf="start" >{project.name}</Heading>
                       <Divider borderColor="gray.300"/>
-                        <HStack spacing={4}>
+                      <Flex flexDirection="row" justifyContent="space-evenly" width="100%" >
                                 <Button
                                   variant="ghost"
                                   leftIcon={project.first_icon}
@@ -221,7 +220,6 @@ import Experience from "./Experience";
                                 >
                                   { project.first_icon_name}
                                 </Button>
-                                <Spacer/>
                                 <Button
                                   variant="ghost"
                                   leftIcon={project.second_icon}
@@ -230,7 +228,7 @@ import Experience from "./Experience";
                                 >
                                   { project.second_icon_name}
                                 </Button>
-                          </HStack>
+                          </Flex>
                     </VStack>
                   </CardFooter>
                 </Card>
